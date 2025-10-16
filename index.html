@@ -11,34 +11,6 @@
 <body>
     <!-- Splash Screen -->
     <div id="splashScreen" class="splash-screen">
-        <div class="elevator-doors">
-            <div class="elevator-door elevator-left">
-                <div class="door-grid"></div>
-            </div>
-            <div class="elevator-door elevator-right">
-                <div class="door-grid"></div>
-            </div>
-        </div>
-        
-        <!-- Eye Scanner -->
-        <div class="eye-scanner" id="eyeScanner">
-            <div class="scanner-frame">
-                <div class="corner corner-tl"></div>
-                <div class="corner corner-tr"></div>
-                <div class="corner corner-bl"></div>
-                <div class="corner corner-br"></div>
-            </div>
-            <div class="eye-icon">
-                <i class="fas fa-eye"></i>
-            </div>
-            <div class="scan-line"></div>
-            <p class="scanner-text">RETINA SCANNING...</p>
-            <div class="scanner-progress">
-                <div class="scanner-bar" id="scannerBar"></div>
-            </div>
-            <p class="scanner-status" id="scannerStatus">INITIALIZING</p>
-        </div>
-        
         <div class="splash-content">
             <h1 class="splash-name typing">Abdug'aniyev Sanjarbek</h1>
             <div class="loading-container">
@@ -112,38 +84,40 @@
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-number" data-target="15">0</span>
                         <span class="stat-label">Projects</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-number" data-target="10">0</span>
                         <span class="stat-label">Happy Clients</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number" data-target="3">0</span>
                         <span class="stat-label">Years Experience</span>
                     </div>
+                    
+                    <!-- Robot Home (Cyberpunk) -->
+                    <div class="robot-home" id="robotHome">
+                        <div class="home-structure">
+                            <div class="home-antenna"></div>
+                            <div class="home-roof"></div>
+                            <div class="home-base">
+                                <div class="home-window left"></div>
+                                <div class="home-window right"></div>
+                                <div class="home-door"></div>
+                            </div>
+                            <div class="sleep-z">Z</div>
+                            <div class="sleep-z">Z</div>
+                            <div class="sleep-z">Z</div>
+                            <div class="sleep-z">Z</div>
+                            <div class="sleep-z">Z</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Robot Home (Cyberpunk) -->
-        <div class="robot-home" id="robotHome">
-            <div class="home-structure">
-                <div class="home-antenna"></div>
-                <div class="home-roof"></div>
-                <div class="home-base">
-                    <div class="home-window left"></div>
-                    <div class="home-window right"></div>
-                    <div class="home-door"></div>
-                </div>
-                <div class="sleep-z">Z</div>
-                <div class="sleep-z">Z</div>
-                <div class="sleep-z">Z</div>
             </div>
         </div>
     </section>
@@ -399,49 +373,29 @@
     <!-- Footer with Wave Animation -->
     <footer class="footer" id="contact">
         <canvas id="wave-canvas"></canvas>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Me</h3>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+998 XX XXX XX XX</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>your.email@example.com</span>
-                    </div>
-                    <div class="qr-code">
-                        <img src="qr-code.png" alt="QR Code" id="qrCode">
-                        <p>Scan for contact</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Me</h3>
-                <div class="footer-social">
-                    <a href="https://t.me/yourusername" target="_blank" class="footer-social-icon">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="https://instagram.com/yourusername" target="_blank" class="footer-social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://github.com/yourusername" target="_blank" class="footer-social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer-social-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <div class="footer-links">
-                    <a href="#skills">Skills</a>
-                    <a href="#about">About Me</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
+        
+        <!-- Scrolling Menu Items -->
+        <div class="footer-scroll-container">
+            <div class="footer-scroll-content" id="footerScrollContent">
+                <div class="footer-scroll-item"><i class="fas fa-code"></i> Skills</div>
+                <div class="footer-scroll-item"><i class="fas fa-user"></i> About Me</div>
+                <div class="footer-scroll-item"><i class="fas fa-project-diagram"></i> Projects</div>
+                <div class="footer-scroll-item"><i class="fas fa-envelope"></i> Contact</div>
+                <div class="footer-scroll-item"><i class="fas fa-phone"></i> +998 93 494 15 22</div>
+                <div class="footer-scroll-item"><i class="fab fa-telegram"></i> Telegram</div>
+                <div class="footer-scroll-item"><i class="fab fa-instagram"></i> Instagram</div>
+                <div class="footer-scroll-item"><i class="fab fa-github"></i> GitHub</div>
+                <div class="footer-scroll-item"><i class="fab fa-linkedin"></i> LinkedIn</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="footer-scroll-item"><i class="fas fa-code"></i> Skills</div>
+                <div class="footer-scroll-item"><i class="fas fa-user"></i> About Me</div>
+                <div class="footer-scroll-item"><i class="fas fa-project-diagram"></i> Projects</div>
+                <div class="footer-scroll-item"><i class="fas fa-envelope"></i> Contact</div>
+                <div class="footer-scroll-item"><i class="fas fa-phone"></i> +998 93 494 15 22</div>
+                <div class="footer-scroll-item"><i class="fab fa-telegram"></i> Telegram</div>
+                <div class="footer-scroll-item"><i class="fab fa-instagram"></i> Instagram</div>
+                <div class="footer-scroll-item"><i class="fab fa-github"></i> GitHub</div>
+                <div class="footer-scroll-item"><i class="fab fa-linkedin"></i> LinkedIn</div>
             </div>
         </div>
         <div class="footer-bottom">

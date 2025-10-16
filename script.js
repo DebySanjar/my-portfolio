@@ -21,30 +21,8 @@ preloadImages();
 window.addEventListener('load', () => {
     const splashScreen = document.getElementById('splashScreen');
     const mainContent = document.getElementById('mainContent');
-    const scannerStatus = document.getElementById('scannerStatus');
     
-    // Eye scanner status updates
-    setTimeout(() => {
-        if (scannerStatus) scannerStatus.textContent = 'SCANNING...';
-    }, 300);
-    
-    setTimeout(() => {
-        if (scannerStatus) scannerStatus.textContent = 'ANALYZING...';
-    }, 800);
-    
-    setTimeout(() => {
-        if (scannerStatus) scannerStatus.textContent = 'ACCESS GRANTED';
-        if (scannerStatus) scannerStatus.style.color = 'var(--bright-green)';
-    }, 1500);
-    
-    // Total animation duration: 6.5 seconds
-    // 0-2s - eye scanner
-    // 0.5s - elevator starts coming down
-    // 2s - elevator opens
-    // 2s - content shows and loading bar fills
-    // 1s - elevator closes
-    // 1s - elevator goes down
-    
+    // Simple animation: 3 seconds total
     setTimeout(() => {
         splashScreen.classList.add('fade-out');
         mainContent.classList.add('show');
@@ -53,7 +31,7 @@ window.addEventListener('load', () => {
         setTimeout(() => {
             splashScreen.style.display = 'none';
         }, 800);
-    }, 6500);
+    }, 3000);
 });
 
 // ===== Matrix Rain Effect =====
@@ -75,7 +53,7 @@ if (matrixCanvas) {
 
     // Matrix characters
     const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-    const fontSize = 10;
+    const fontSize = 14;
     const columns = matrixCanvas.width / fontSize;
     const drops = Array(Math.floor(columns)).fill(1);
 
@@ -127,10 +105,11 @@ if (waveCanvas) {
     function drawWave() {
         waveCtx.clearRect(0, 0, waveCanvas.width, waveCanvas.height);
         
-        // Draw multiple waves
-        drawSingleWave(waveOffset, 50, 0.02, 30, 'rgba(144, 238, 144, 0.3)');
+        // Draw multiple waves with green-blue gradient colors
+        drawSingleWave(waveOffset, 50, 0.02, 30, 'rgba(0, 255, 0, 0.3)');
         drawSingleWave(waveOffset + 50, 70, 0.025, 25, 'rgba(135, 206, 235, 0.3)');
-        drawSingleWave(waveOffset + 100, 90, 0.03, 20, 'rgba(0, 255, 0, 0.2)');
+        drawSingleWave(waveOffset + 100, 90, 0.03, 20, 'rgba(144, 238, 144, 0.25)');
+        drawSingleWave(waveOffset + 150, 60, 0.018, 35, 'rgba(0, 191, 255, 0.2)');
         
         waveOffset += 2;
         requestAnimationFrame(drawWave);
@@ -684,17 +663,12 @@ const robotHome = document.getElementById('robotHome');
 // Robot messages
 const robotMessages = [
     "Salom! Men sizning yordamchingizman 🤖",
-    "Portfolioni ko'rib chiqyapsizmi? Yordam kerakmi?",
+    "Portfolioni ko'rib chiqyapsizmi?",
     "Skills bo'limini ko'rib chiqing! 💻",
     "Loyihalarimni ko'rishni xohlaysizmi?",
     "CV yuklab olishingiz mumkin! 📄",
-    "Savollaringiz bormi? Men yordamga tayyorman!",
-    "Abduganiyev yaxshi dasturchi! 👨‍💻",
-    "Nomerini beraymi? 📱",
-    "Abduganiyevga yo'naltiraymi? 📧",
-    "Abduganiyev bilan bog'lanishni xohlaysizmi? 💬",
-    "Professional dasturchi kerakmi? Abduganiyev yordam beradi! 🚀",
-    "Abduganiyevning loyihalarini ko'ring! 🎯",
+    "Savollaringiz bormi?",
+    "Abduganiyev professional dasturchi! 👨‍💻",
     "Kontakt ma'lumotlari kerakmi? 📞"
 ];
 
@@ -716,7 +690,7 @@ function initRobot() {
     if (robotHome) {
         const homeRect = robotHome.getBoundingClientRect();
         homePosition.x = homeRect.left + homeRect.width / 2 - 40;
-        homePosition.y = homeRect.top - 50;
+        homePosition.y = homeRect.top + homeRect.height / 2 - 40;
     }
     
     // Start robot at home
@@ -729,21 +703,10 @@ function initRobot() {
     setTimeout(() => {
         if (!greetingShown) {
             greetingShown = true;
-            showRobotMessage("Salom! Men Abduganiyevning portfolio yordamchisiman. Sizga nima yordam bera olaman? 🤖", [
-                { text: 'Skills', action: 'skills' },
-                { text: 'Projects', action: 'projects' },
-                { text: 'About Me', action: 'about' },
-                { text: 'Download CV', action: 'cv' }
-            ]);
-            
-            // After greeting, start moving
+            leaveHome();
             setTimeout(() => {
-                hideRobotChat();
-                leaveHome();
-                setTimeout(() => {
-                    startRobotMovement();
-                }, 2000);
-            }, 8000);
+                startRobotMovement();
+            }, 1000);
         }
     }, 2000);
 }
@@ -834,40 +797,42 @@ function stopSleeping() {
     }
 }
 
-// Get random position on screen
+// Get random position on screen (full page)
 function getRandomPosition() {
     const margin = 100;
+    const pageHeight = document.documentElement.scrollHeight;
     return {
         x: margin + Math.random() * (window.innerWidth - margin * 2),
-        y: margin + Math.random() * (window.innerHeight - margin * 2)
+        y: margin + Math.random() * (pageHeight - margin * 2)
     };
 }
 
 // Start automatic robot movement
 function startRobotMovement() {
-    // Follow cursor with offset
+    // Move to random positions on the page
     setInterval(() => {
         if (!chatVisible && !isRobotAtHome && followCursor) {
-            // Calculate offset position (150-250px away from cursor)
-            const angle = Math.random() * Math.PI * 2;
-            const distance = 150 + Math.random() * 100; // 150-250px away
+            const scrollY = window.pageYOffset;
+            const viewportHeight = window.innerHeight;
+            const pageHeight = document.documentElement.scrollHeight;
             
-            const offsetX = Math.cos(angle) * distance;
-            const offsetY = Math.sin(angle) * distance;
+            // Random position within visible area or nearby
+            const randomY = scrollY + Math.random() * viewportHeight * 2 - viewportHeight / 2;
+            const randomX = 100 + Math.random() * (window.innerWidth - 200);
             
             targetPosition = {
-                x: Math.max(50, Math.min(window.innerWidth - 100, cursorPosition.x + offsetX)),
-                y: Math.max(50, Math.min(window.innerHeight - 100, cursorPosition.y + offsetY))
+                x: Math.max(50, Math.min(window.innerWidth - 100, randomX)),
+                y: Math.max(50, Math.min(pageHeight - 100, randomY))
             };
             
             isRobotMoving = true;
             moveRobot();
         }
-    }, 2000); // Update target every 2 seconds
+    }, 3000); // Update target every 3 seconds
     
     // Occasionally go home
     setInterval(() => {
-        if (!chatVisible && !isRobotAtHome && Math.random() > 0.85) {
+        if (!chatVisible && !isRobotAtHome && Math.random() > 0.9) {
             followCursor = false;
             targetPosition = { x: homePosition.x, y: homePosition.y };
             isRobotMoving = true;
@@ -876,16 +841,9 @@ function startRobotMovement() {
             // Resume following cursor after coming back
             setTimeout(() => {
                 followCursor = true;
-            }, 30000);
+            }, 20000);
         }
-    }, 60000); // Check every minute
-    
-    // Show random messages more frequently
-    setInterval(() => {
-        if (!chatVisible && !isRobotAtHome && Math.random() > 0.6) {
-            showRobotMessage(robotMessages[Math.floor(Math.random() * robotMessages.length)]);
-        }
-    }, 15000); // Every 15 seconds, 40% chance
+    }, 45000); // Check every 45 seconds
 }
 
 // Show robot chat
@@ -896,6 +854,7 @@ function showRobotMessage(message, buttons = null) {
     
     if (buttons) {
         robotChatButtons.innerHTML = '';
+        robotChatButtons.style.display = 'flex';
         buttons.forEach(btn => {
             const button = document.createElement('button');
             button.className = 'robot-chat-btn';
@@ -903,11 +862,14 @@ function showRobotMessage(message, buttons = null) {
             button.setAttribute('data-action', btn.action);
             robotChatButtons.appendChild(button);
         });
+    } else {
+        robotChatButtons.style.display = 'none';
     }
     
-    // Position chat near robot
+    // Position chat near robot (fixed position relative to viewport)
     const robotRect = robotAssistant.getBoundingClientRect();
     const chatWidth = 250;
+    const scrollY = window.pageYOffset;
     
     if (robotRect.left > window.innerWidth / 2) {
         robotChat.style.left = (robotRect.left - chatWidth - 20) + 'px';
@@ -923,11 +885,11 @@ function showRobotMessage(message, buttons = null) {
     robotChat.classList.add('show');
     chatVisible = true;
     
-    // Auto hide after 8 seconds if no buttons
+    // Auto hide after 5 seconds if no buttons
     if (!buttons) {
         setTimeout(() => {
             hideRobotChat();
-        }, 8000);
+        }, 5000);
     }
 }
 
@@ -944,11 +906,11 @@ if (robotAssistant) {
         if (chatVisible) {
             hideRobotChat();
         } else {
-            showRobotMessage('Qanday yordam bera olaman?', [
+            showRobotMessage('Sizga qanday yordam bera olaman?', [
                 { text: 'Skills', action: 'skills' },
                 { text: 'Projects', action: 'projects' },
-                { text: 'About Me', action: 'about' },
-                { text: 'Download CV', action: 'cv' }
+                { text: 'About', action: 'about' },
+                { text: 'Contact', action: 'contact' }
             ]);
         }
     });
