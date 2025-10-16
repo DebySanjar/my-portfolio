@@ -1,0 +1,142 @@
+═══════════════════════════════════════════════════════════════
+           PORTFOLIO SAYT - TEKSHIRISH RO'YXATI
+═══════════════════════════════════════════════════════════════
+
+📋 RASMLAR (7 ta rasm kerak):
+─────────────────────────────────────────────────────────────
+[ ] profile.jpg     - Sizning rasmingiz (500x500px yoki kattaroq)
+[ ] coding.jpg      - Kodlash/ish joyi rasmi (800x600px)
+[ ] project1.jpg    - Birinchi loyiha screenshot
+[ ] project2.jpg    - Ikkinchi loyiha screenshot
+[ ] project3.jpg    - Uchinchi loyiha screenshot
+[ ] project4.jpg    - To'rtinchi loyiha screenshot
+[ ] qr-code.png     - Kontakt uchun QR kod (300x300px)
+
+📝 SHAXSIY MA'LUMOTLAR:
+─────────────────────────────────────────────────────────────
+[ ] Ismingiz o'zgartirildi (nav-name)
+[ ] Telefon raqam yangilandi
+[ ] Email manzil yangilandi
+[ ] Telegram username to'g'ri
+[ ] Instagram username to'g'ri
+[ ] GitHub username to'g'ri
+[ ] LinkedIn username to'g'ri
+
+📊 STATISTIKA RAQAMLARI:
+─────────────────────────────────────────────────────────────
+[ ] Loyihalar soni (data-target)
+[ ] Mijozlar soni (data-target)
+[ ] Tajriba yillari (data-target)
+
+🎯 LOYIHALAR MA'LUMOTI (4 ta loyiha):
+─────────────────────────────────────────────────────────────
+LOYIHA 1:
+[ ] Nomi o'zgartirildi
+[ ] Tavsifi yozildi
+[ ] Texnologiya tag'lari yangilandi
+[ ] Rasm qo'shildi
+
+LOYIHA 2:
+[ ] Nomi o'zgartirildi
+[ ] Tavsifi yozildi
+[ ] Texnologiya tag'lari yangilandi
+[ ] Rasm qo'shildi
+
+LOYIHA 3:
+[ ] Nomi o'zgartirildi
+[ ] Tavsifi yozildi
+[ ] Texnologiya tag'lari yangilandi
+[ ] Rasm qo'shildi
+
+LOYIHA 4:
+[ ] Nomi o'zgartirildi
+[ ] Tavsifi yozildi
+[ ] Texnologiya tag'lari yangilandi
+[ ] Rasm qo'shildi
+
+📱 MATNLAR VA TAVSIFLAR:
+─────────────────────────────────────────────────────────────
+[ ] Hero bo'limidagi tavsif o'zgartirildi
+[ ] About Me matnlari yangilandi
+[ ] Skills tavsifi to'g'ri
+[ ] Footer ma'lumotlari to'liq
+
+🔗 HAVOLALAR TEKSHIRUVI:
+─────────────────────────────────────────────────────────────
+[ ] Telegram havolasi ishlaydi (2 joyda)
+[ ] Instagram havolasi ishlaydi (2 joyda)
+[ ] GitHub havolasi ishlaydi (2 joyda)
+[ ] LinkedIn havolasi ishlaydi (2 joyda)
+[ ] Ichki havolalar ishlaydi (#skills, #about, #projects, #contact)
+
+🎨 DIZAYN TEKSHIRUVI:
+─────────────────────────────────────────────────────────────
+[ ] Logo to'g'ri ko'rinadi
+[ ] Ranglar yoqimli
+[ ] Rasmlar sifatli
+[ ] Matnlar o'qiladi
+[ ] Animatsiyalar ishlaydi
+
+📱 RESPONSIVE TEKSHIRUVI:
+─────────────────────────────────────────────────────────────
+[ ] Desktop'da to'g'ri ko'rinadi (1920px)
+[ ] Laptop'da to'g'ri ko'rinadi (1366px)
+[ ] Tablet'da to'g'ri ko'rinadi (768px)
+[ ] Mobile'da to'g'ri ko'rinadi (375px)
+[ ] Hamburger menyu ishlaydi
+
+🔧 FUNKSIONALLIK TEKSHIRUVI:
+─────────────────────────────────────────────────────────────
+[ ] Matrix animatsiya ishlaydi
+[ ] To'lqin animatsiya ko'rinadi
+[ ] Counter animatsiya ishlaydi
+[ ] Progress bar'lar to'ladi
+[ ] Scroll animatsiyalari ishlaydi
+[ ] Contact dropdown ochiladi
+[ ] Hover effektlari ishlaydi
+[ ] Smooth scroll ishlaydi
+
+🌐 BRAUZER TEKSHIRUVI:
+─────────────────────────────────────────────────────────────
+[ ] Chrome'da ishlaydi
+[ ] Firefox'da ishlaydi
+[ ] Edge'da ishlaydi
+[ ] Safari'da ishlaydi (agar Mac bo'lsa)
+
+⚡ PERFORMANCE:
+─────────────────────────────────────────────────────────────
+[ ] Sahifa tez yuklanadi
+[ ] Rasmlar optimallashtirilgan
+[ ] Animatsiyalar silliq
+[ ] Scroll silliq ishlaydi
+
+🎯 OXIRGI TEKSHIRUVLAR:
+─────────────────────────────────────────────────────────────
+[ ] Barcha matnlarda xato yo'q
+[ ] Telefon raqam to'g'ri formatda
+[ ] Email to'g'ri yozilgan
+[ ] Ijtimoiy tarmoq havolalari ochiladi
+[ ] Rasmlar to'g'ri ko'rinadi
+[ ] QR kod ishlaydi
+[ ] Professional ko'rinish
+
+═══════════════════════════════════════════════════════════════
+
+✅ TAYYOR BO'LGANDAN KEYIN:
+
+1. Barcha punktlar belgilangan
+2. Sayt to'liq test qilingan
+3. Barcha qurilmalarda ko'rilgan
+4. Professional ko'rinish tekshirilgan
+5. Hosting'ga yuklashga tayyor!
+
+═══════════════════════════════════════════════════════════════
+
+💡 ESLATMA:
+
+Har bir punktni diqqat bilan tekshiring. Professional portfolio
+uchun barcha detallar muhim!
+
+Omad tilaymiz! 🚀
+
+═══════════════════════════════════════════════════════════════

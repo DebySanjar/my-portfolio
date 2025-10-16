@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile Developer - Android & Flutter Portfolio">
+    <title>Mobile Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="elevator-doors">
+            <div class="elevator-door elevator-left">
+                <div class="door-grid"></div>
+            </div>
+            <div class="elevator-door elevator-right">
+                <div class="door-grid"></div>
+            </div>
+        </div>
+        
+        <!-- Eye Scanner -->
+        <div class="eye-scanner" id="eyeScanner">
+            <div class="scanner-frame">
+                <div class="corner corner-tl"></div>
+                <div class="corner corner-tr"></div>
+                <div class="corner corner-bl"></div>
+                <div class="corner corner-br"></div>
+            </div>
+            <div class="eye-icon">
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="scan-line"></div>
+            <p class="scanner-text">RETINA SCANNING...</p>
+            <div class="scanner-progress">
+                <div class="scanner-bar" id="scannerBar"></div>
+            </div>
+            <p class="scanner-status" id="scannerStatus">INITIALIZING</p>
+        </div>
+        
+        <div class="splash-content">
+            <h1 class="splash-name typing">Abdug'aniyev Sanjarbek</h1>
+            <div class="loading-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+            <p class="loading-text">Loading<span class="dots"></span></p>
+            <p class="welcome-text">Portfolioga Xush kelibsiz</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content">
+    <!-- Matrix Background Canvas -->
+    <canvas id="matrix-canvas"></canvas>
+
+   
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="logo-text">AS</span>
+                </div>
+                <span class="nav-name">Abduganiyev</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <div class="contact-dropdown">
+                    <a href="#contact" class="nav-link contact-btn">Contact</a>
+                    <div class="social-icons-dropdown">
+                        <a href="https://t.me/Sanjarbek_Abduganiyev" target="_blank" class="social-icon" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://instagram.com/yourusername" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/yourusername" target="_blank" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="portfolio.png" alt="Profile Picture" id="profileImg">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Mobile Developer</h1>
+                <h2 class="hero-subtitle">Android & Flutter Specialist</h2>
+                <p class="hero-description">
+                    Salom! Men professional mobile dasturchi bo'lib, Android va Flutter texnologiyalarida 
+                    zamonaviy va foydalanuvchilarga qulay mobil ilovalar yarataman. Har bir loyihaga 
+                    kreativlik va innovatsion yondashuvni qo'llashga intilamam.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Robot Home (Cyberpunk) -->
+        <div class="robot-home" id="robotHome">
+            <div class="home-structure">
+                <div class="home-antenna"></div>
+                <div class="home-roof"></div>
+                <div class="home-base">
+                    <div class="home-window left"></div>
+                    <div class="home-window right"></div>
+                    <div class="home-door"></div>
+                </div>
+                <div class="sleep-z">Z</div>
+                <div class="sleep-z">Z</div>
+                <div class="sleep-z">Z</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3>Android Development</h3>
+                    <p>Native Android ilovalar yaratish, Kotlin, Java, Jetpack Compose</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Flutter Development</h3>
+                    <p>Cross-platform mobil ilovalar, Dart, State Management</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Backend Integration</h3>
+                    <p>REST API, Firebase, SQLite, Room Database</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Material Design, Custom Animations, Responsive Layouts</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-progress="75"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Men professional mobile dasturchi sifatida Android va Flutter platformalarida 
+                        zamonaviy mobil ilovalar yaratishga ixtisoslashganman. Texnologiyaga bo'lgan 
+                        qiziqishim meni doimo yangi narsalarni o'rganishga va o'z ko'nikmalarimni 
+                        rivojlantirishga undaydi.
+                    </p>
+                    <p class="about-paragraph">
+                        Har bir loyihaga professional yondashuv va mijozlar ehtiyojlarini chuqur 
+                        tushunish bilan yondashaman. Mening maqsadim - foydalanuvchilar uchun 
+                        qulay, tez va ishonchli mobil ilovalar yaratish.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Clean Code Architecture</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Agile Development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Performance Optimization</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Continuous Learning</span>
+                        </div>
+                    </div>
+                    <div class="cv-download-section">
+                        <a href="resumeMe.pdf" download="Sanjarbek_Abduganiyev_CV.pdf" class="cv-download-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="terminal-container" id="terminalContainer">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-btn close"></span>
+                                <span class="terminal-btn minimize"></span>
+                                <span class="terminal-btn maximize"></span>
+                            </div>
+                            <div class="terminal-title">
+                                <i class="fas fa-terminal"></i>
+                                <span>Terminal - Sanjarbek Abduganiyev</span>
+                            </div>
+                        </div>
+                        <div class="terminal-body" id="terminalBody">
+                            <div class="terminal-welcome">
+                                <pre class="ascii-art">
+   ____          _ _             
+  / ___|___   __| (_)_ __   __ _ 
+ | |   / _ \ / _` | | '_ \ / _` |
+ | |__| (_) | (_| | | | | | (_| |
+  \____\___/ \__,_|_|_| |_|\__, |
+                            |___/ 
+                                </pre>
+                                <p class="welcome-text">Buyruqlarni bilish uchun <span class="command-hint">yordam</span> buyrug'ini yozing</p>
+                            </div>
+                            <div class="terminal-output" id="terminalOutput"></div>
+                            <div class="terminal-input-line">
+                                <span class="terminal-prompt">visitor@portfolio:~$</span>
+                                <input type="text" class="terminal-input" id="terminalInput" placeholder="buyruq kiriting...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Island Design -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-container">
+                <!-- Project Island 1 -->
+                <div class="project-island">
+                    <div class="island-surface">
+                        <div class="island-left"></div>
+                        <div class="island-right"></div>
+                        <div class="project-icon-container">
+                            <i class="fas fa-shopping-cart project-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="project1.jpg" alt="E-Commerce App">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce App</h3>
+                            <p>Flutter asosida yaratilgan to'liq funksional onlayn do'kon ilovasi</p>
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Payment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Island 2 -->
+                <div class="project-island">
+                    <div class="island-surface">
+                        <div class="island-left"></div>
+                        <div class="island-right"></div>
+                        <div class="project-icon-container">
+                            <i class="fas fa-dumbbell project-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="project2.jpg" alt="Fitness Tracker">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Fitness Tracker</h3>
+                            <p>Android native ilova - sport mashg'ulotlarini kuzatish tizimi</p>
+                            <div class="project-tags">
+                                <span class="tag">Android</span>
+                                <span class="tag">Kotlin</span>
+                                <span class="tag">Room DB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Island 3 -->
+                <div class="project-island">
+                    <div class="island-surface">
+                        <div class="island-left"></div>
+                        <div class="island-right"></div>
+                        <div class="project-icon-container">
+                            <i class="fas fa-comments project-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="project3.jpg" alt="Social Media App">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Social Media App</h3>
+                            <p>Real-time chat va ijtimoiy tarmoq imkoniyatlari bilan ilova</p>
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">WebSocket</span>
+                                <span class="tag">Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Island 4 -->
+                <div class="project-island">
+                    <div class="island-surface">
+                        <div class="island-left"></div>
+                        <div class="island-right"></div>
+                        <div class="project-icon-container">
+                            <i class="fas fa-cloud-sun project-icon"></i>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="project4.jpg" alt="Weather App">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Details</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Weather App</h3>
+                            <p>Ob-havo ma'lumotlari va prognoz ko'rsatuvchi zamonaviy ilova</p>
+                            <div class="project-tags">
+                                <span class="tag">Android</span>
+                                <span class="tag">API</span>
+                                <span class="tag">Material UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Wave Animation -->
+    <footer class="footer" id="contact">
+        <canvas id="wave-canvas"></canvas>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Me</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+998 XX XXX XX XX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>your.email@example.com</span>
+                    </div>
+                    <div class="qr-code">
+                        <img src="qr-code.png" alt="QR Code" id="qrCode">
+                        <p>Scan for contact</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="footer-social">
+                    <a href="https://t.me/yourusername" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://instagram.com/yourusername" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer-social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="#skills">Skills</a>
+                    <a href="#about">About Me</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mobile Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Robot Assistant -->
+    <div class="robot-assistant" id="robotAssistant">
+        <div class="robot-body">
+            <div class="robot-antenna"></div>
+            <div class="robot-head">
+                <div class="robot-eyes">
+                    <div class="robot-eye"></div>
+                    <div class="robot-eye"></div>
+                </div>
+            </div>
+            <div class="robot-torso"></div>
+            <div class="robot-arm left"></div>
+            <div class="robot-arm right"></div>
+        </div>
+    </div>
+
+    <!-- Robot Chat Bubble -->
+    <div class="robot-chat" id="robotChat">
+        <button class="robot-close-btn" id="robotCloseBtn">&times;</button>
+        <div class="robot-chat-text" id="robotChatText">
+            Salom! Men sizning yordamchingizman. Qanday yordam bera olaman?
+        </div>
+        <div class="robot-chat-buttons" id="robotChatButtons">
+            <button class="robot-chat-btn" data-action="skills">Skills</button>
+            <button class="robot-chat-btn" data-action="projects">Projects</button>
+            <button class="robot-chat-btn" data-action="contact">Contact</button>
+            <button class="robot-chat-btn" data-action="cv">Download CV</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
