@@ -1,5 +1,5 @@
-// ===== Preload Images =====
-const imagesToPreload = ['portfolio.png', 'project1.jpg', 'project2.jpg', 'project3.jpg', 'project4.jpg', 'qr-code.png'];
+
+const imagesToPreload = ['portfolio.png', 'project1.png', 'project2.jpg', 'project3.jpg', 'project4.jpg', 'qr-code.png'];
 let imagesLoaded = 0;
 
 function preloadImages() {
@@ -467,7 +467,7 @@ document.head.appendChild(style);
 
 // ===== Console Welcome Message =====
 console.log('%c Welcome to My Portfolio! ', 'background: #90EE90; color: #000; font-size: 20px; padding: 10px; border-radius: 5px;');
-console.log('%c Mobile Developer | Android & Flutter Specialist ', 'background: #87CEEB; color: #000; font-size: 14px; padding: 5px;');
+console.log('%c Mobile Developer | Android & Flutter developer ', 'background: #87CEEB; color: #000; font-size: 14px; padding: 5px;');
 
 // ===== Performance Optimization =====
 // Debounce function for scroll events
@@ -533,7 +533,7 @@ const terminalCommands = {
 <strong>Texnologik Ko'nikmalar:</strong><br>
 • Android Development (Kotlin, Java)<br>
 • Flutter Development (Dart)<br>
-• UI/UX Design (Figma, Adobe XD)<br>
+• UI/UX Design (Figma)<br>
 • Backend Integration (REST API, Firebase)<br>
 • Database (SQLite, Room, Hive)<br>
 • Version Control (Git, GitHub)<br>
